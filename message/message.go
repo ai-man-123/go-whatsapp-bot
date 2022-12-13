@@ -12,9 +12,9 @@ import (
 
 // Config
 var (
-	prefix = "!"
-	self   = true
-	owner  = "6289636559820"
+	prefix = "."
+	self   = false
+	owner  = "60102810046"
 )
 
 func Msg(client *whatsmeow.Client, msg *events.Message) {
@@ -44,9 +44,9 @@ func Msg(client *whatsmeow.Client, msg *events.Message) {
 	case prefix + "menu":
 		simp.Reply(helper.Menu(pushName, prefix))
 	case prefix + "owner":
-		simp.SendContact(from, owner, "vnia")
+		simp.SendContact(from, owner, "aiman")
 	case prefix + "source":
-		simp.Reply("Source Code : https://github.com/fckvania/go-whatsapp-bot")
+		simp.Reply("Source Code : https://github.com/ai-man-123/go-whatsapp-bot")
 	case prefix + "sticker":
 		if quotedImage != nil {
 			data, _ := client.Download(quotedImage)
